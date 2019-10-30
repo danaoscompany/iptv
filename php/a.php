@@ -1,3 +1,2 @@
 <?php
-$name = $_POST["nama"];
-echo $name;
+echo "Halo dunia 123456";
