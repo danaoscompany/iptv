@@ -1,13 +1,11 @@
 <?php
 $receiverRegistrationToken = $_POST["registration_token"];
-$data = "{\"type\": \"new_message\"}";
 //FCM api URL
 $url = 'https://fcm.googleapis.com/fcm/send';
 //api_key available in Firebase Console -> Project Settings -> CLOUD MESSAGING -> Server key
 $server_key = 'AAAAQ0HaK2k:APA91bFS-FA9qbzC7AQ25VJS9W_9vaO5yLPd9XcbaNwaFCvpROH8J1Tu8QEDNKdS8joA49QSg0v6YsaZR2-fcE_yHm4smeqmIAPXQXdRmhzue4zg-768pNbDdj3X4Ewwz67yGKvkCua0';
 			
 $fields = array();
-$fields['data'] = $data;
 $fields['to'] = $receiverRegistrationToken;
 //header with content_type api key
 $headers = array(
