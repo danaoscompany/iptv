@@ -30,7 +30,7 @@ if ($data) {
 	});
 	//echo "Fastest country: " . $servers[0]["country"] . ", IP: " . $servers[0]["ip"] . ", speed: " . $servers[0]["speed"] . "<br/>";
 	//echo json_encode($servers[0]);
-	echo json_encode($servers[rand(count($servers)-1)]);
+	echo json_encode($servers[rand(0, count($servers)-1)]);
 } else {
 	echo -1;
 }
