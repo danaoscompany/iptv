@@ -8,6 +8,8 @@ if ($data) {
 		$configs = explode(",", $line);
 		$speed = intval($configs[4]);
 		$vpnConfig = $configs[count($configs)-1];
+		echo $vpnConfig;
+		return;
 		$server = array(
 			"speed" => $speed,
 			"config" => $vpnConfig
