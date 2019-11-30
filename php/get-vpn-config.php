@@ -14,10 +14,10 @@ if ($data) {
 			$speed = intval($configs[4]);
 			$vpnConfig = $configs[count($configs)-1];
 			$server = array(
-				"speed" => $speed,
-				"config" => $vpnConfig,
 				"country" => $configs[5],
-				"ip" => $configs[1]
+				"ip" => $configs[1],
+				"speed" => $speed,
+				"config" => $vpnConfig
 			);
 			//echo "Country: " . $configs[5] . ", IP: " . $configs[1] . ", speed: " . $configs[4] . "<br/>";
 			array_push($servers, $server);
