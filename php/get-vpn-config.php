@@ -4,12 +4,14 @@ $servers = [];
 if ($data) {
 	fgets($data);
 	fgets($data);
-	while (($line = fgets($data)) !== false) {
+	$line = fgets($data);
+	$configs = explode(",", $line);
+	$vpnConfig = $configs[count($configs)-1];
+	echo $vpnConfig;
+	/*while (($line = fgets($data)) !== false) {
 		$configs = explode(",", $line);
 		$speed = intval($configs[4]);
 		$vpnConfig = $configs[count($configs)-1];
-		echo $vpnConfig;
-		return;
 		$server = array(
 			"speed" => $speed,
 			"config" => $vpnConfig
@@ -19,7 +21,7 @@ if ($data) {
 	usort($servers, function($a, $b) {
 		return $a["speed"] > $b["speed"] ? -1 : 1;
 	});
-	echo $servers[0]["config"];
+	echo $servers[0]["config"];*/
 } else {
 	echo -1;
 }
