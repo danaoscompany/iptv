@@ -12,10 +12,11 @@ if ($data) {
 		if (strpos($line, '*') === false) {
 			$configs = explode(",", $line);
 			$speed = intval($configs[4]);
-			if ($speed != 0 && $speed >= 50000000) {
+			$country = $configs[5];
+			if ($speed != 0 && $speed >= 50000000 && $country != "United Kingdom" && $country != "United States") {
 				$vpnConfig = $configs[count($configs)-1];
 				$server = array(
-					"country" => $configs[5],
+					"country" => $country,
 					"ip" => $configs[1],
 					"speed" => $speed,
 					"config" => $vpnConfig
