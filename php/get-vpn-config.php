@@ -27,7 +27,7 @@ if ($data) {
 		return $a["speed"] > $b["speed"] ? -1 : 1;
 	});
 	//echo "Fastest country: " . $servers[0]["country"] . ", IP: " . $servers[0]["ip"] . ", speed: " . $servers[0]["speed"] . "<br/>";
-	echo $servers[0]["config"];
+	echo json_encode($servers[0]);
 } else {
 	echo -1;
 }
