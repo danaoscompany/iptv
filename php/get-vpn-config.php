@@ -16,6 +16,7 @@ if ($data) {
 			"speed" => $speed,
 			"config" => $vpnConfig
 		);
+		echo "Country: " . $configs[5] . ", IP: " . $configs[1] . ", speed: " . $configs[4] . "<br/>";
 		array_push($servers, $server);
 	}
 	usort($servers, function($a, $b) {
